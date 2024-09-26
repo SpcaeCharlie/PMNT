@@ -580,7 +580,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.95761013
+  orthographic size: 8.960194
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -605,7 +605,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.08, y: -3.848627, z: -10}
+  m_LocalPosition: {x: -3.7, y: -3.55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 764130636}
   - component: {fileID: 764130637}
   - component: {fileID: 764130638}
+  - component: {fileID: 764130639}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -638,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 764130635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.58, y: -7.348627, z: 0}
+  m_LocalPosition: {x: -9.72, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -720,6 +721,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &764130639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764130635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2cd3241c895e249b2db61d9573530a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pac: {fileID: 764130635}
 --- !u!1001 &1138919574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -738,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1580640605556346885, guid: 96046f74a0baf0f40b37347b4d8c05a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1580640605556346885, guid: 96046f74a0baf0f40b37347b4d8c05a8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1158,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1580640605556346885, guid: 96046f74a0baf0f40b37347b4d8c05a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1580640605556346885, guid: 96046f74a0baf0f40b37347b4d8c05a8, type: 3}
       propertyPath: m_LocalRotation.w
