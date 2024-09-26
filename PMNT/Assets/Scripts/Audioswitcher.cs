@@ -12,7 +12,7 @@ public class Audioswitcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(introtransition());
+        StartCoroutine(Introtransition());
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class Audioswitcher : MonoBehaviour
 
 
 
-    private IEnumerator introtransition()
+    private IEnumerator Introtransition()
     {
         yield return new WaitForSeconds(6f);
         audioSource.clip = ghostnormal;

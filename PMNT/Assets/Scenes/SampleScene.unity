@@ -256,8 +256,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6487b44bbbb213c45b6807b93f80efa2, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6487b44bbbb213c45b6807b93f80efa2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 627f23c314b5d9040b80b50b715720b6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 627f23c314b5d9040b80b50b715720b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -370,9 +370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708e76e6e269974082b487380709506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 215041066}
   intro: {fileID: 0}
-  ghostnormal: {fileID: 0}
+  ghostnormal: {fileID: 8300000, guid: 58b4dae49461a2e4c82faf20aedfd8a6, type: 3}
   ghostscared: {fileID: 0}
   ghostdead: {fileID: 0}
 --- !u!1 &432772047
