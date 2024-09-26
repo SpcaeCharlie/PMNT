@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 1865d5004729c9a4f918f22dc11cd1d4
+guid: f5a81f624306dc043af5b032f4f79930
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4613339018470607210
-    second: Inkonardo_0
+      213: -7536514994932673840
+    second: ClydalangeloDown_0
   - first:
-      213: 8438718627713187757
-    second: Inkonardo_1
+      213: -5650687540576857886
+    second: ClydalangeloDown_1
   - first:
-      213: 3664324973621497485
-    second: Inkonardo_2
+      213: 9066605419658651940
+    second: ClydalangeloDown_2
   - first:
-      213: -3364096959830549769
-    second: Inkonardo_3
+      213: -8752918152073102706
+    second: ClydalangeloDown_3
   - first:
-      213: -5045970630206120691
-    second: Inkonardo_4
+      213: 3133130885882369265
+    second: ClydalangeloDown_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,11 +138,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inkonardo_0
+      name: ClydalangeloDown_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 74
+        x: 13
+        y: 72
         width: 13
         height: 14
       alignment: 0
@@ -152,18 +152,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a69c360156fd50040800000000000000
-      internalID: 4613339018470607210
+      spriteID: 0d212a2da8be86790800000000000000
+      internalID: -7536514994932673840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_1
+      name: ClydalangeloDown_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 74
+        x: 38
+        y: 72
         width: 13
         height: 14
       alignment: 0
@@ -173,17 +173,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: daff054b1e95c1570800000000000000
-      internalID: 8438718627713187757
+      spriteID: 2e0d037de99b491b0800000000000000
+      internalID: -5650687540576857886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_2
+      name: ClydalangeloDown_2
       rect:
         serializedVersion: 2
-        x: 7
+        x: 14
         y: 43
         width: 11
         height: 10
@@ -194,18 +194,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e4d4a262c4ad230800000000000000
-      internalID: 3664324973621497485
+      spriteID: 429a26d979d03dd70800000000000000
+      internalID: 9066605419658651940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_3
+      name: ClydalangeloDown_3
       rect:
         serializedVersion: 2
-        x: 38
-        y: 42
+        x: 45
+        y: 40
         width: 13
         height: 14
       alignment: 0
@@ -215,18 +215,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fa145783a35051d0800000000000000
-      internalID: -3364096959830549769
+      spriteID: e8a3d9dc053678680800000000000000
+      internalID: -8752918152073102706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_4
+      name: ClydalangeloDown_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 10
+        x: 6
+        y: 8
         width: 13
         height: 14
       alignment: 0
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0d928f427c19f9b0800000000000000
-      internalID: -5045970630206120691
+      spriteID: 1f4d2dfc0fd1b7b20800000000000000
+      internalID: 3133130885882369265
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e21d6ef0ae032c4fa5f1d873f8e075f
+    spriteID: 08a739e8a00f75146bf9200153bb498e
     internalID: 0
     vertices: []
     indices: 
@@ -253,11 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inkonardo_0: 4613339018470607210
-      Inkonardo_1: 8438718627713187757
-      Inkonardo_2: 3664324973621497485
-      Inkonardo_3: -3364096959830549769
-      Inkonardo_4: -5045970630206120691
+      ClydalangeloDown_0: -7536514994932673840
+      ClydalangeloDown_1: -5650687540576857886
+      ClydalangeloDown_2: 9066605419658651940
+      ClydalangeloDown_3: -8752918152073102706
+      ClydalangeloDown_4: 3133130885882369265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

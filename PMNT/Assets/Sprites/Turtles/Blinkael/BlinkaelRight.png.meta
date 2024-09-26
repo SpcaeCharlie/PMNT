@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 1865d5004729c9a4f918f22dc11cd1d4
+guid: 08d919a39fbab524b9079443310213a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4613339018470607210
-    second: Inkonardo_0
+      213: 605664277113586185
+    second: BlinkaelRight_0
   - first:
-      213: 8438718627713187757
-    second: Inkonardo_1
+      213: -3909324531400017922
+    second: BlinkaelRight_1
   - first:
-      213: 3664324973621497485
-    second: Inkonardo_2
+      213: -2092755010094375896
+    second: BlinkaelRight_2
   - first:
-      213: -3364096959830549769
-    second: Inkonardo_3
+      213: -8535182533973359792
+    second: BlinkaelRight_3
   - first:
-      213: -5045970630206120691
-    second: Inkonardo_4
+      213: 5686016670923909015
+    second: BlinkaelRight_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inkonardo_0
+      name: BlinkaelRight_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 74
-        width: 13
-        height: 14
+        x: 10
+        y: 77
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a69c360156fd50040800000000000000
-      internalID: 4613339018470607210
+      spriteID: 902cf7a7370c76800800000000000000
+      internalID: 605664277113586185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_1
+      name: BlinkaelRight_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 74
-        width: 13
-        height: 14
+        x: 42
+        y: 70
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: daff054b1e95c1570800000000000000
-      internalID: 8438718627713187757
+      spriteID: ef77e2a1d0a4fb9c0800000000000000
+      internalID: -3909324531400017922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_2
+      name: BlinkaelRight_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 43
-        width: 11
-        height: 10
+        x: 11
+        y: 46
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e4d4a262c4ad230800000000000000
-      internalID: 3664324973621497485
+      spriteID: 82cd76df76a05f2e0800000000000000
+      internalID: -2092755010094375896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_3
+      name: BlinkaelRight_3
       rect:
         serializedVersion: 2
-        x: 38
-        y: 42
-        width: 13
-        height: 14
+        x: 42
+        y: 45
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fa145783a35051d0800000000000000
-      internalID: -3364096959830549769
+      spriteID: 0534669e4b0fc8980800000000000000
+      internalID: -8535182533973359792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_4
+      name: BlinkaelRight_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 10
-        width: 13
-        height: 14
+        x: 10
+        y: 6
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0d928f427c19f9b0800000000000000
-      internalID: -5045970630206120691
+      spriteID: 7976e51590ac8ee40800000000000000
+      internalID: 5686016670923909015
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e21d6ef0ae032c4fa5f1d873f8e075f
+    spriteID: 3288156e28f341f4dbd22ebd47227e20
     internalID: 0
     vertices: []
     indices: 
@@ -253,11 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inkonardo_0: 4613339018470607210
-      Inkonardo_1: 8438718627713187757
-      Inkonardo_2: 3664324973621497485
-      Inkonardo_3: -3364096959830549769
-      Inkonardo_4: -5045970630206120691
+      BlinkaelRight_0: 605664277113586185
+      BlinkaelRight_1: -3909324531400017922
+      BlinkaelRight_2: -2092755010094375896
+      BlinkaelRight_3: -8535182533973359792
+      BlinkaelRight_4: 5686016670923909015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

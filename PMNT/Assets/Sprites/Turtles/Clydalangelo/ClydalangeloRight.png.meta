@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 1865d5004729c9a4f918f22dc11cd1d4
+guid: 340012e1fff5fdf4ca1a0f44519fd6d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4613339018470607210
-    second: Inkonardo_0
+      213: 4248721054966009763
+    second: ClydalangeloRight_0
   - first:
-      213: 8438718627713187757
-    second: Inkonardo_1
+      213: -6823960476319153820
+    second: ClydalangeloRight_1
   - first:
-      213: 3664324973621497485
-    second: Inkonardo_2
+      213: -2376323944560133018
+    second: ClydalangeloRight_2
   - first:
-      213: -3364096959830549769
-    second: Inkonardo_3
+      213: -1931867921948960116
+    second: ClydalangeloRight_3
   - first:
-      213: -5045970630206120691
-    second: Inkonardo_4
+      213: 840277698301005925
+    second: ClydalangeloRight_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inkonardo_0
+      name: ClydalangeloRight_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 74
-        width: 13
-        height: 14
+        x: 10
+        y: 77
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a69c360156fd50040800000000000000
-      internalID: 4613339018470607210
+      spriteID: 3afc8fee94d76fa30800000000000000
+      internalID: 4248721054966009763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_1
+      name: ClydalangeloRight_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 74
-        width: 13
-        height: 14
+        x: 42
+        y: 70
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: daff054b1e95c1570800000000000000
-      internalID: 8438718627713187757
+      spriteID: 46101b70a1c6c41a0800000000000000
+      internalID: -6823960476319153820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_2
+      name: ClydalangeloRight_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 43
-        width: 11
-        height: 10
+        x: 11
+        y: 46
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e4d4a262c4ad230800000000000000
-      internalID: 3664324973621497485
+      spriteID: 66cfc3576f9950fd0800000000000000
+      internalID: -2376323944560133018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_3
+      name: ClydalangeloRight_3
       rect:
         serializedVersion: 2
-        x: 38
-        y: 42
-        width: 13
-        height: 14
+        x: 42
+        y: 45
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fa145783a35051d0800000000000000
-      internalID: -3364096959830549769
+      spriteID: c8a92474c50a035e0800000000000000
+      internalID: -1931867921948960116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkonardo_4
+      name: ClydalangeloRight_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 10
-        width: 13
-        height: 14
+        x: 10
+        y: 6
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0d928f427c19f9b0800000000000000
-      internalID: -5045970630206120691
+      spriteID: 5601ae75d1449ab00800000000000000
+      internalID: 840277698301005925
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e21d6ef0ae032c4fa5f1d873f8e075f
+    spriteID: b2a4f2eb326f71d458452401658c3978
     internalID: 0
     vertices: []
     indices: 
@@ -253,11 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inkonardo_0: 4613339018470607210
-      Inkonardo_1: 8438718627713187757
-      Inkonardo_2: 3664324973621497485
-      Inkonardo_3: -3364096959830549769
-      Inkonardo_4: -5045970630206120691
+      ClydalangeloRight_0: 4248721054966009763
+      ClydalangeloRight_1: -6823960476319153820
+      ClydalangeloRight_2: -2376323944560133018
+      ClydalangeloRight_3: -1931867921948960116
+      ClydalangeloRight_4: 840277698301005925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
