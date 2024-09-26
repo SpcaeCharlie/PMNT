@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 041201025eb0e0942b64898bbbb0038f
+guid: f5a81f624306dc043af5b032f4f79930
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7903181090054569748
-    second: Pellets_0
+      213: -7536514994932673840
+    second: ClydalangeloDown_0
   - first:
-      213: -7342644781390826527
-    second: Pellets_1
+      213: -5650687540576857886
+    second: ClydalangeloDown_1
   - first:
-      213: 2595460911834133645
-    second: Pellets_2
+      213: 9066605419658651940
+    second: ClydalangeloDown_2
+  - first:
+      213: -8752918152073102706
+    second: ClydalangeloDown_3
+  - first:
+      213: 3133130885882369265
+    second: ClydalangeloDown_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,12 +138,54 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pellets_0
+      name: ClydalangeloDown_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 46
-        width: 37
+        x: 13
+        y: 72
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d212a2da8be86790800000000000000
+      internalID: -7536514994932673840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClydalangeloDown_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 72
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0d037de99b491b0800000000000000
+      internalID: -5650687540576857886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClydalangeloDown_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 43
+        width: 11
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce086b3eba2425290800000000000000
-      internalID: -7903181090054569748
+      spriteID: 429a26d979d03dd70800000000000000
+      internalID: 9066605419658651940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pellets_1
+      name: ClydalangeloDown_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 13
-        width: 14
-        height: 9
+        x: 45
+        y: 40
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e3f25d697fa91a90800000000000000
-      internalID: -7342644781390826527
+      spriteID: e8a3d9dc053678680800000000000000
+      internalID: -8752918152073102706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pellets_2
+      name: ClydalangeloDown_4
       rect:
         serializedVersion: 2
-        x: 40
-        y: 9
-        width: 12
-        height: 13
+        x: 6
+        y: 8
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84f84ea2fde40420800000000000000
-      internalID: 2595460911834133645
+      spriteID: 1f4d2dfc0fd1b7b20800000000000000
+      internalID: 3133130885882369265
       vertices: []
       indices: 
       edges: []
@@ -197,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 08a739e8a00f75146bf9200153bb498e
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pellets_0: -7903181090054569748
-      Pellets_1: -7342644781390826527
-      Pellets_2: 2595460911834133645
+      ClydalangeloDown_0: -7536514994932673840
+      ClydalangeloDown_1: -5650687540576857886
+      ClydalangeloDown_2: 9066605419658651940
+      ClydalangeloDown_3: -8752918152073102706
+      ClydalangeloDown_4: 3133130885882369265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

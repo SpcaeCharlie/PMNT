@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 041201025eb0e0942b64898bbbb0038f
+guid: a95f68988d5f0594c85a00373ae57ad9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7903181090054569748
-    second: Pellets_0
+      213: 702588754923615794
+    second: BlinkaelLeft_0
   - first:
-      213: -7342644781390826527
-    second: Pellets_1
+      213: 4387619439676504466
+    second: BlinkaelLeft_1
   - first:
-      213: 2595460911834133645
-    second: Pellets_2
+      213: 701911885199024081
+    second: BlinkaelLeft_2
+  - first:
+      213: -8617040656337762470
+    second: BlinkaelLeft_3
+  - first:
+      213: 2300065597395761865
+    second: BlinkaelLeft_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,54 +138,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pellets_0
+      name: BlinkaelLeft_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 46
-        width: 37
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce086b3eba2425290800000000000000
-      internalID: -7903181090054569748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 13
+        x: 8
+        y: 70
         width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e3f25d697fa91a90800000000000000
-      internalID: -7342644781390826527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 9
-        width: 12
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84f84ea2fde40420800000000000000
-      internalID: 2595460911834133645
+      spriteID: 236f76800c810c900800000000000000
+      internalID: 702588754923615794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlinkaelLeft_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 77
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299348f32a4f3ec30800000000000000
+      internalID: 4387619439676504466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlinkaelLeft_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 39
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df99e40421bdb900800000000000000
+      internalID: 701911885199024081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlinkaelLeft_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 38
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5783e79d2f1a6880800000000000000
+      internalID: -8617040656337762470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlinkaelLeft_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 13
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cafedc79797bef10800000000000000
+      internalID: 2300065597395761865
       vertices: []
       indices: 
       edges: []
@@ -197,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 95719b340c3ba3a4d8c7bcc89212d5b7
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pellets_0: -7903181090054569748
-      Pellets_1: -7342644781390826527
-      Pellets_2: 2595460911834133645
+      BlinkaelLeft_0: 702588754923615794
+      BlinkaelLeft_1: 4387619439676504466
+      BlinkaelLeft_2: 701911885199024081
+      BlinkaelLeft_3: -8617040656337762470
+      BlinkaelLeft_4: 2300065597395761865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

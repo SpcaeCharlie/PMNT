@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 041201025eb0e0942b64898bbbb0038f
+guid: f28e1ddb967b08b42896ec3f937ab171
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7903181090054569748
-    second: Pellets_0
+      213: -8864468202908723705
+    second: InkonardoLeft_0
   - first:
-      213: -7342644781390826527
-    second: Pellets_1
+      213: -124939784596245913
+    second: InkonardoLeft_1
   - first:
-      213: 2595460911834133645
-    second: Pellets_2
+      213: 4025392507343472727
+    second: InkonardoLeft_2
+  - first:
+      213: 5714619541589920686
+    second: InkonardoLeft_3
+  - first:
+      213: -7664090507384764572
+    second: InkonardoLeft_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,54 +138,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pellets_0
+      name: InkonardoLeft_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 46
-        width: 37
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce086b3eba2425290800000000000000
-      internalID: -7903181090054569748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 13
+        x: 8
+        y: 70
         width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e3f25d697fa91a90800000000000000
-      internalID: -7342644781390826527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 9
-        width: 12
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84f84ea2fde40420800000000000000
-      internalID: 2595460911834133645
+      spriteID: 70651eaa2251bf480800000000000000
+      internalID: -8864468202908723705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InkonardoLeft_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 77
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762b3d88def144ef0800000000000000
+      internalID: -124939784596245913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InkonardoLeft_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 39
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7580ab178211dd730800000000000000
+      internalID: 4025392507343472727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InkonardoLeft_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 38
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab09fa12386e4f40800000000000000
+      internalID: 5714619541589920686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InkonardoLeft_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 13
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46743e42a4ea3a590800000000000000
+      internalID: -7664090507384764572
       vertices: []
       indices: 
       edges: []
@@ -197,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 076e7dd01029f3c4da61049bee8a12e4
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pellets_0: -7903181090054569748
-      Pellets_1: -7342644781390826527
-      Pellets_2: 2595460911834133645
+      InkonardoLeft_0: -8864468202908723705
+      InkonardoLeft_1: -124939784596245913
+      InkonardoLeft_2: 4025392507343472727
+      InkonardoLeft_3: 5714619541589920686
+      InkonardoLeft_4: -7664090507384764572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

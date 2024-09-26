@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 041201025eb0e0942b64898bbbb0038f
+guid: 927570333b61ba946b7238f349a04555
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7903181090054569748
-    second: Pellets_0
+      213: 8859365965212692881
+    second: PinkatelloLeft_0
   - first:
-      213: -7342644781390826527
-    second: Pellets_1
+      213: -367904574862233917
+    second: PinkatelloLeft_1
   - first:
-      213: 2595460911834133645
-    second: Pellets_2
+      213: -807276402259814082
+    second: PinkatelloLeft_2
+  - first:
+      213: 4762519549594655090
+    second: PinkatelloLeft_3
+  - first:
+      213: -2540587971915160007
+    second: PinkatelloLeft_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,54 +138,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pellets_0
+      name: PinkatelloLeft_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 46
-        width: 37
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce086b3eba2425290800000000000000
-      internalID: -7903181090054569748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 13
+        x: 8
+        y: 70
         width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e3f25d697fa91a90800000000000000
-      internalID: -7342644781390826527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pellets_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 9
-        width: 12
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84f84ea2fde40420800000000000000
-      internalID: 2595460911834133645
+      spriteID: 19130bb086ac2fa70800000000000000
+      internalID: 8859365965212692881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkatelloLeft_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 77
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce68180db0f4eaf0800000000000000
+      internalID: -367904574862233917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkatelloLeft_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 39
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e399fb7a36afbc4f0800000000000000
+      internalID: -807276402259814082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkatelloLeft_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 38
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27951752c4ed71240800000000000000
+      internalID: 4762519549594655090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkatelloLeft_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 13
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936ed5d33b40ebcd0800000000000000
+      internalID: -2540587971915160007
       vertices: []
       indices: 
       edges: []
@@ -197,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b15502dfd7ff72a4e9d6089a3879d37e
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pellets_0: -7903181090054569748
-      Pellets_1: -7342644781390826527
-      Pellets_2: 2595460911834133645
+      PinkatelloLeft_0: 8859365965212692881
+      PinkatelloLeft_1: -367904574862233917
+      PinkatelloLeft_2: -807276402259814082
+      PinkatelloLeft_3: 4762519549594655090
+      PinkatelloLeft_4: -2540587971915160007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
