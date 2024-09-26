@@ -26,7 +26,7 @@ public class Audioswitcher : MonoBehaviour
 
     private IEnumerator Introtransition()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(6.5f);
         audioSource.clip = ghostnormal;
         audioSource.Play();
     }
