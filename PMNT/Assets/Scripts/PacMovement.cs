@@ -16,6 +16,23 @@ public class PacMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pac.transform.position += Vector3.right * speed * Time.deltaTime;
+        if (pac.transform.position.x >=-3.75f && pac.transform.position.y >4.75f)
+        {
+            pac.transform.position += Vector3.down * speed * Time.deltaTime;
+        }
+       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
+        //{
+       //     pac.transform.position += Vector3.down * speed * Time.deltaTime;
+        //}
+       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
+        //{
+          //  pac.transform.position += Vector3.down * speed * Time.deltaTime;
+       // }
+       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
+        //{
+         //   pac.transform.position += Vector3.down * speed * Time.deltaTime;
+        //}
+
+   
     }
 }
