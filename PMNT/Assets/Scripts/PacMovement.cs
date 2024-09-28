@@ -8,11 +8,18 @@ public class PacMovement : MonoBehaviour
 
     private Animator pacanim;
 
-    float speed = 1f;
+    float speed = 1.3f;
+
+    public AudioClip walk1;
+
+    AudioSource audioSource;
+
+
     // Start is called before the first frame update
     void Start()
     {
         pacanim = pac.GetComponent<Animator>();
+        audioSource = pac.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +29,7 @@ public class PacMovement : MonoBehaviour
         {
             pac.transform.position += Vector3.down * speed * Time.deltaTime;
             pacanim.Play("PacDown");
+            //audioSource.Play();
         }
         
         if (pac.transform.position.x > -6.19f && pac.transform.position.y <= 4.75f)
