@@ -20,18 +20,20 @@ public class PacMovement : MonoBehaviour
         {
             pac.transform.position += Vector3.down * speed * Time.deltaTime;
         }
-       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
-        //{
-       //     pac.transform.position += Vector3.down * speed * Time.deltaTime;
-        //}
-       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
-        //{
-          //  pac.transform.position += Vector3.down * speed * Time.deltaTime;
-       // }
-       // if (pac.transform.position.x >= -3.75 && pac.transform.position.y >= 6.7)
-        //{
-         //   pac.transform.position += Vector3.down * speed * Time.deltaTime;
-        //}
+        
+        if (pac.transform.position.x > -6.19f && pac.transform.position.y <= 4.75f)
+        {
+            pac.transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+
+        if (pac.transform.position.x <= -6.19 && pac.transform.position.y < 6.69)
+        {
+            pac.transform.position += Vector3.up * speed * Time.deltaTime;
+        }
+        if (pac.transform.position.x < -3.75 && pac.transform.position.y >= 6.69)
+        {
+           pac.transform.position += Vector3.right * speed * Time.deltaTime;
+        }
 
    
     }
