@@ -55,13 +55,43 @@ public class LevelGenerator : MonoBehaviour
         tile.AddComponent<SpriteRenderer>();
         tile.GetComponent<SpriteRenderer>().sprite = sprites[1];
         tile.transform.position = new Vector3(0, 0, 0);
-
+        Debug.Log(Levely);
+        Debug.Log(Levelx);
         for (int i = 0; i < Levelx; i++)
         {
             for (int j = 0; j < Levely; j++)
             {
+                int tilenum = generatorarray[j, i];
+                Vector3 rotation;
+
+                if (tilenum == 1 || tilenum == 3 || tilenum ==2 || tilenum == 4 || tilenum == 7)
+                {
+                    if (i - 1 >= 0)
+                    {
+                        int north = generatorarray[j, i - 1];
+                    }
+                    if (i + 1 < Levelx)
+                    {
+                       int south = generatorarray[j, i+1 ];
+                    }
+                    if (j - 1 >= 0)
+                    {
+                        int west = generatorarray[j - 1, i];
+                    }
+                    if (j + 1 < Levely)
+                    {
+                        int east = generatorarray[j + 1, i];
+                    }
+                }
+                if (tilenum ==1 || tilenum == 3)
+                {
+
+                }
+
+                
+
                 GameObject temp = Instantiate(tile, new Vector3(0.5f*i, -0.5f*j, 0), Quaternion.identity, generatedlevel.transform);
-                temp.GetComponent<SpriteRenderer>().sprite = sprites[generatorarray[j, i]];
+                temp.GetComponent<SpriteRenderer>().sprite = sprites[tilenum];
             }
         }
     
