@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -81,43 +82,69 @@ public class LevelGenerator : MonoBehaviour
                     if (j - 1 >= 0 && isrotateable(generatorarray[j - 1,i])) {west = true;}
                     if (j + 1 < Levely && isrotateable(generatorarray[j +1, i])){east= true; }
                 }
-                    if (tilenum == 1 || tilenum == 3)
+                if (tilenum == 1 || tilenum == 3)
+                {
+
+                    if (IsOnBorder(i, j, Levelx, Levely))
                     {
+                        Debug.Log(1);
+                        Debug.Log("i " + i);
+                        Debug.Log("j " + j);
+                        if (north && !south && !east && !west) { rotation = new Vector3(0, 0, 180); Debug.Log("north"); }
+                        if (south && !north && !east && !west) { rotation = new Vector3(0, 0, 0); Debug.Log("south"); }
+                        if (east && !west && !north && !south) { rotation = new Vector3(0, 0, 270); Debug.Log("east"); }
+                        if (west == true && east == false && north == false && south == false)
+                        {
+                            Debug.Log("hit1"+j);
+                            if (i == 0) // Top border
+                            {
+                                south = true;
+                            }
+                            if (i == Levelx - 1)
+                            {
+                                Debug.Log("hit");
+                                south = true;
+                            }
+                        }
+                    }
+                    
+
                         if (south == true && east == true && north == false && west == false)
-                    {
-                        rotation = new Vector3(0,0,0);
-                    }
-                    else if(east == true && north == true && west == false && south == false)
-                    {
-                        rotation = new Vector3(0, 0, 270);
-                    }
-                    else if(north == true && west == true && south == false && east == false)
-                    {
-                        rotation = new Vector3(0, 0, 180);
-                    }
-                    else if(west == true && south == true && east == false && north == false)
-                    {
-                        rotation = new Vector3(0, 0, 90);
-                    }
+                        {
+                            rotation = new Vector3(0, 0, 0);
+                        }
+                        else if (east == true && north == true && west == false && south == false)
+                        {
+                            rotation = new Vector3(0, 0, 270);
+                        }
+                        else if (north == true && west == true && south == false && east == false)
+                        {
+                            rotation = new Vector3(0, 0, 180);
+                        }
+                        else if (west == true && south == true && east == false && north == false)
+                        {
+                            rotation = new Vector3(0, 0, 90);
+                        }
 
 
-                    else if (south == true && east == true && isrotateable(generatorarray[j+1,i+1]) == false ) 
+                        else if (south == true && east == true && isrotateable(generatorarray[j + 1, i + 1]) == false)
                         {
-                        rotation = new Vector3(0, 0, 0);
+                            rotation = new Vector3(0, 0, 0);
                         }
-                        else if (east == true && north == true && isrotateable(generatorarray[j+1, i-1]) == false)
+                        else if (east == true && north == true && isrotateable(generatorarray[j + 1, i - 1]) == false)
                         {
-                        rotation = new Vector3(0, 0, 270);
+                            rotation = new Vector3(0, 0, 270);
                         }
-                        else if (north == true && west == true && isrotateable(generatorarray[j-1,i-1]) == false)
+                        else if (north == true && west == true && isrotateable(generatorarray[j - 1, i - 1]) == false)
                         {
-                        rotation = new Vector3(0, 0, 180);
+                            rotation = new Vector3(0, 0, 180);
                         }
-                        else if (west == true && south == true && isrotateable(generatorarray[j-1, i+1]) == false)
+                        else if (west == true && south == true && isrotateable(generatorarray[j - 1, i + 1]) == false)
                         {
-                        rotation = new Vector3(0, 0, 90);
-                        test += 1;
+                            rotation = new Vector3(0, 0, 90);
+                            test += 1;
                         }
+                    
                 }
 
 
@@ -147,5 +174,14 @@ public class LevelGenerator : MonoBehaviour
         return tiletype == 1 || tiletype == 2 || tiletype == 3 || tiletype == 4 || tiletype == 7;
     }
 
+    bool IsOnBorder(int x, int y, int levelWidth, int levelHeight)
+    {
+        return (x == 0 || x == levelWidth - 1 || y == 0 || y == levelHeight - 1);
+    }
+
+    void borderside()
+    {
+       
+    }
 
 }
