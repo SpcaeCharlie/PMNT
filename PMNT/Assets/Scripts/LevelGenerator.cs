@@ -11,6 +11,8 @@ public class LevelGenerator : MonoBehaviour
 
     public Sprite[] sprites;
 
+    public RuntimeAnimatorController pelletanim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,8 @@ public class LevelGenerator : MonoBehaviour
         Generator();
 
         Camera.main.orthographicSize = generatorarray.GetLength(1);
+
+
 
     }
 
@@ -89,9 +93,7 @@ public class LevelGenerator : MonoBehaviour
                     //covers if the corner is on the border 
                     if (IsOnBorder(i, j, Levelx, Levely))
                     {
-                        Debug.Log(1);
-                        Debug.Log("i " + i);
-                        Debug.Log("j " + j);
+                        
                         if (north && !south && !east && !west) {
                             Debug.Log("north");
                             if (j == 0)
@@ -218,6 +220,11 @@ public class LevelGenerator : MonoBehaviour
 
                 GameObject temp = Instantiate(tile, new Vector3((0.5f *i)-6.75f, (-0.5f * j)+7.25f, 0), Quaternion.Euler(rotation), generatedlevel.transform);
                     temp.GetComponent<SpriteRenderer>().sprite = sprites[tilenum];
+                if (tilenum == 6)
+                {
+                   Animator animator = temp.AddComponent<Animator>();
+                    animator.runtimeAnimatorController = pelletanim;
+                }
             }
         }
 
