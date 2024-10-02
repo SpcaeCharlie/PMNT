@@ -67,7 +67,6 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int j = 0; j < Levely; j++)
             {
-
                 bool north= false;
                 bool south = false;
                 bool east = false;
@@ -75,40 +74,74 @@ public class LevelGenerator : MonoBehaviour
                 int tilenum = generatorarray[j, i];
                 Vector3 rotation= new Vector3(0,0,0);
 
-                    if (tilenum == 1 || tilenum == 3 || tilenum == 2 || tilenum == 4 || tilenum == 7)
-                    {
+                if (tilenum == 1 || tilenum == 3 || tilenum == 2 || tilenum == 4 || tilenum == 7)
+                {
                     if (i - 1 >= 0 && isrotateable(generatorarray[j, i -1])) { north = true;}
                     if (i + 1 < Levelx && isrotateable(generatorarray[j,i + 1])) { south= true; }
                     if (j - 1 >= 0 && isrotateable(generatorarray[j - 1,i])) {west = true;}
                     if (j + 1 < Levely && isrotateable(generatorarray[j +1, i])){east= true; }
                 }
+
+                //corner rotations
                 if (tilenum == 1 || tilenum == 3)
                 {
-
+                    //covers if the corner is on the border 
                     if (IsOnBorder(i, j, Levelx, Levely))
                     {
                         Debug.Log(1);
                         Debug.Log("i " + i);
                         Debug.Log("j " + j);
-                        if (north && !south && !east && !west) { rotation = new Vector3(0, 0, 180); Debug.Log("north"); }
-                        if (south && !north && !east && !west) { rotation = new Vector3(0, 0, 0); Debug.Log("south"); }
-                        if (east && !west && !north && !south) { rotation = new Vector3(0, 0, 270); Debug.Log("east"); }
-                        if (west == true && east == false && north == false && south == false)
-                        {
-                            Debug.Log("hit1"+j);
-                            if (i == 0) // Top border
+                        if (north && !south && !east && !west) {
+                            Debug.Log("north");
+                            if (j == 0)
                             {
-                                south = true;
+                                west = true;
+                            }
+                            if (j == Levely - 1)
+                            {
+                                east = true;
+                            }
+                        }
+
+                        if (south && !north && !east && !west)
+                        {
+                            Debug.Log("south");
+                            if (j == 0)
+                            {
+                                west = true;
+                            }
+                            if (j == Levely - 1)
+                            {
+                                east = true;
+                            }
+                        }
+
+                        if (east && !west && !north && !south)
+                        {
+                            if (i == 0) 
+                            {
+                                north = true;
                             }
                             if (i == Levelx - 1)
                             {
-                                Debug.Log("hit");
+                                south = true;
+                            }
+                        }
+
+                        if (west == true && east == false && north == false && south == false)
+                        {
+                            if (i == 0) 
+                            {
+                                north = true;
+                            }
+                            if (i == Levelx - 1)
+                            {
                                 south = true;
                             }
                         }
                     }
                     
-
+                    //covers when the corner connects to only two other tiles
                         if (south == true && east == true && north == false && west == false)
                         {
                             rotation = new Vector3(0, 0, 0);
@@ -126,7 +159,7 @@ public class LevelGenerator : MonoBehaviour
                             rotation = new Vector3(0, 0, 90);
                         }
 
-
+                        //covers if the corner is adjacent more than two valid tiles
                         else if (south == true && east == true && isrotateable(generatorarray[j + 1, i + 1]) == false)
                         {
                             rotation = new Vector3(0, 0, 0);
@@ -147,11 +180,44 @@ public class LevelGenerator : MonoBehaviour
                     
                 }
 
+                //covers straight peices 
+                if (tilenum == 2 || tilenum == 4)
+                {
+                    if (IsOnBorder(i, j, Levelx, Levely))
+                    {
+                        if(j ==0)
+                        {
+                            west = true;
+                        }
+                        if (j == Levely-1)
+                        {
+                            east = true;
+                        }
+                        if (i ==0)
+                        {
+                            north = true;
+                        }
+                        if (i==Levelx-1)
+                        {
+                            south = true;
+                        }
+                    }
+
+                        if (north == true && south == true)
+                    {
+                        rotation = new Vector3(0, 0, 0);
+                    }
+                    else if(east == true && west == true)
+                    {
+                        rotation = new Vector3(0, 0, 90);
+                    }
+                    
+                }
 
 
                 GameObject temp = Instantiate(tile, new Vector3(0.5f * i, -0.5f * j, 0), Quaternion.Euler(rotation), generatedlevel.transform);
                     temp.GetComponent<SpriteRenderer>().sprite = sprites[tilenum];
-              }
+            }
         }
 
 
@@ -159,7 +225,7 @@ public class LevelGenerator : MonoBehaviour
 
 
 
-        Debug.Log(test);
+    
 
     }
     void removecurrentlevel()
@@ -167,7 +233,6 @@ public class LevelGenerator : MonoBehaviour
 
             Destroy(GameObject.Find("Level"));
         }
-
 
     bool isrotateable(int tiletype)
     {
@@ -179,9 +244,5 @@ public class LevelGenerator : MonoBehaviour
         return (x == 0 || x == levelWidth - 1 || y == 0 || y == levelHeight - 1);
     }
 
-    void borderside()
-    {
-       
-    }
 
 }
