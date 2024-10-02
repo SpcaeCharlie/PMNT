@@ -221,8 +221,8 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
-        Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(180, 0, 0)));
+        Instantiate(generatedlevel, new Vector3(0, 0.5f, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
+        Instantiate(generatedlevel, new Vector3(0, 0.5f, 0), Quaternion.Euler(new Vector3(180, 0, 0)));
         Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 180, 0)));
 
 
