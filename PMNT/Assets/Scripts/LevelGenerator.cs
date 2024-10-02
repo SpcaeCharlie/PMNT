@@ -38,6 +38,8 @@ public class LevelGenerator : MonoBehaviour
         removecurrentlevel();
         Generator();
 
+        Camera.main.orthographicSize = generatorarray.GetLength(1);
+
     }
 
     // Update is called once per frame
@@ -57,9 +59,8 @@ public class LevelGenerator : MonoBehaviour
         GameObject tile = new GameObject();
         tile.AddComponent<SpriteRenderer>();
         tile.GetComponent<SpriteRenderer>().sprite = sprites[1];
-        tile.transform.position = new Vector3(0, 0, 0);
-        Debug.Log(Levely);
-        Debug.Log(Levelx);
+        tile.transform.position = new Vector3(-6.75f, 7.25f, 0);
+
 
         int test = 0;
 
@@ -215,17 +216,18 @@ public class LevelGenerator : MonoBehaviour
                 }
 
 
-                GameObject temp = Instantiate(tile, new Vector3(0.5f * i, -0.5f * j, 0), Quaternion.Euler(rotation), generatedlevel.transform);
+                GameObject temp = Instantiate(tile, new Vector3((0.5f *i)-6.75f, (-0.5f * j)+7.25f, 0), Quaternion.Euler(rotation), generatedlevel.transform);
                     temp.GetComponent<SpriteRenderer>().sprite = sprites[tilenum];
             }
         }
 
+        Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
+        Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(180, 0, 0)));
+        Instantiate(generatedlevel, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 180, 0)));
 
 
 
 
-
-    
 
     }
     void removecurrentlevel()
