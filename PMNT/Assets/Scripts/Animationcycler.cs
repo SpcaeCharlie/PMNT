@@ -5,13 +5,14 @@ using UnityEngine;
 public class Animationcycler : MonoBehaviour
 {
 
-            public Animator animator;
-
+    private Animator animator;
+    private int i = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator.SetInteger("direction", 1);
+        animator = GetComponent<Animator>();
+        StartCoroutine(animationloop());
     }
 
     // Update is called once per frame
@@ -19,4 +20,20 @@ public class Animationcycler : MonoBehaviour
     {
         
     }
+
+    private IEnumerator animationloop()
+    {
+        while (true)
+        {
+
+            yield return new WaitForSeconds(3);
+            animator.SetInteger("Direction", i);
+            i++;
+            if (i > 10)
+            {
+                i = 1;
+            }
+        }
+    }
+
 }
