@@ -54,4 +54,10 @@ public class UIManager : MonoBehaviour
     {
         
     }
+
+    public void Level1Load()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
 }
