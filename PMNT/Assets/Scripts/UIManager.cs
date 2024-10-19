@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     private RectTransform subtitle;
     private RectTransform button1;
     private RectTransform button2;
+    private RectTransform highscore;
     public GameObject inka;
     public GameObject Clyda;
     public GameObject Pinka;
@@ -43,9 +44,17 @@ public class UIManager : MonoBehaviour
         button1.sizeDelta = new Vector2(Screen.width / 5, Screen.height /15);
         button1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height/28;
         button2 = gameObject.transform.GetChild(4).GetComponent<RectTransform>();
-        button2.anchoredPosition = new Vector2(0, -(Screen.height / 4f));
+        button2.anchoredPosition = new Vector2(0, -(Screen.height /5f));
         button2.sizeDelta = new Vector2(Screen.width / 5, Screen.height / 15);
         button2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
+
+
+        highscore = gameObject.transform.GetChild(5).GetComponent<RectTransform>();
+        highscore.anchoredPosition = new Vector2(0, Screen.height / 5);
+        highscore.GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
+
+        highscore.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-Screen.width / 5, -Screen.height / 10);
+        highscore.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 5, Screen.height / 15);
 
         inka.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 10, Screen.width / 10);
         inka.GetComponent<RectTransform>().anchoredPosition = new Vector2((Screen.height/10), -(Screen.height/10));
