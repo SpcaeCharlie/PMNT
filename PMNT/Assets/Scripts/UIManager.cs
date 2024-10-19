@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     private RectTransform title;
     private RectTransform subtitle;
     private RectTransform button1;
+    private RectTransform button2;
     public GameObject inka;
     public GameObject Clyda;
     public GameObject Pinka;
@@ -38,10 +39,13 @@ public class UIManager : MonoBehaviour
         subtitle.anchoredPosition = new Vector2(0, Screen.height / 3f);
         subtitle.GetComponent<Text>().fontSize = Screen.height / 28;
         button1 = gameObject.transform.GetChild(3).GetComponent<RectTransform>();
-        button1.anchoredPosition = new Vector2(0, Screen.height / 5f);
+        button1.anchoredPosition = new Vector2(0, -(Screen.height / 10f));
         button1.sizeDelta = new Vector2(Screen.width / 5, Screen.height /15);
         button1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height/28;
-
+        button2 = gameObject.transform.GetChild(4).GetComponent<RectTransform>();
+        button2.anchoredPosition = new Vector2(0, -(Screen.height / 4f));
+        button2.sizeDelta = new Vector2(Screen.width / 5, Screen.height / 15);
+        button2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
 
         inka.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 10, Screen.width / 10);
         inka.GetComponent<RectTransform>().anchoredPosition = new Vector2((Screen.height/10), -(Screen.height/10));
