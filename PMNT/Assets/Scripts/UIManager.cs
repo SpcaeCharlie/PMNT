@@ -52,9 +52,15 @@ public class UIManager : MonoBehaviour
         highscore = gameObject.transform.GetChild(5).GetComponent<RectTransform>();
         highscore.anchoredPosition = new Vector2(0, Screen.height / 5);
         highscore.GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
+        highscore.sizeDelta = new Vector2(Screen.width,  Screen.height / 15);
 
-        highscore.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-Screen.width / 5, -Screen.height / 10);
+        highscore.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-Screen.width / 20, -Screen.height / 10);
         highscore.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 5, Screen.height / 15);
+        highscore.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
+
+        highscore.GetChild(1).GetComponent<RectTransform>().anchoredPosition = new Vector2(Screen.width / 20, -Screen.height / 10);
+        highscore.GetChild(1).GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 5, Screen.height / 15);
+        highscore.GetChild(1).GetComponent<TextMeshProUGUI>().fontSize = Screen.height / 28;
 
         inka.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 10, Screen.width / 10);
         inka.GetComponent<RectTransform>().anchoredPosition = new Vector2((Screen.height/10), -(Screen.height/10));
