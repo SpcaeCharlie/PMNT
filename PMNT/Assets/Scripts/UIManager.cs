@@ -1,6 +1,7 @@
 using NUnit.Framework.Internal;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class UIManager : MonoBehaviour
     private RectTransform imagetransform;
     private RectTransform title;
     private RectTransform subtitle;
+    private RectTransform button1;
     public GameObject inka;
     public GameObject Clyda;
     public GameObject Pinka;
@@ -35,6 +37,11 @@ public class UIManager : MonoBehaviour
         subtitle.sizeDelta = new Vector2(Screen.width, Screen.height / 5);
         subtitle.anchoredPosition = new Vector2(0, Screen.height / 3f);
         subtitle.GetComponent<Text>().fontSize = Screen.height / 28;
+        button1 = gameObject.transform.GetChild(3).GetComponent<RectTransform>();
+        button1.anchoredPosition = new Vector2(0, Screen.height / 5f);
+        button1.sizeDelta = new Vector2(Screen.width / 5, Screen.height /15);
+        button1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = Screen.height/28;
+
 
         inka.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width / 10, Screen.width / 10);
         inka.GetComponent<RectTransform>().anchoredPosition = new Vector2((Screen.height/10), -(Screen.height/10));
