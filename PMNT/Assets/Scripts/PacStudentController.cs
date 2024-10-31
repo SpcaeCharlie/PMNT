@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PacStudentController : MonoBehaviour
 {
+
+    private Vector2 lastInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,11 @@ public class PacStudentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.w))
+        {
+
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
