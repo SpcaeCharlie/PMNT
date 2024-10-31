@@ -65,6 +65,7 @@ public class LevelGenerator : MonoBehaviour
         tile.GetComponent<SpriteRenderer>().sprite = sprites[1];
         tile.transform.position = new Vector3(-6.75f, 7.25f, 0);
         tile.AddComponent<BoxCollider2D>();
+        tile.tag = "Walkable";
 
         int test = 0;
 
@@ -224,6 +225,10 @@ public class LevelGenerator : MonoBehaviour
                 {
                    Animator animator = temp.AddComponent<Animator>();
                     animator.runtimeAnimatorController = pelletanim;
+                }
+                if (tilenum == 7 || tilenum == 1 || tilenum == 2 || tilenum == 3 || tilenum == 4)
+                {
+                    temp.tag = "Unwalkable";
                 }
             }
         }
