@@ -64,7 +64,7 @@ public class LevelGenerator : MonoBehaviour
         tile.AddComponent<SpriteRenderer>();
         tile.GetComponent<SpriteRenderer>().sprite = sprites[1];
         tile.transform.position = new Vector3(-6.75f, 7.25f, 0);
-
+        tile.AddComponent<BoxCollider2D>();
 
         int test = 0;
 
