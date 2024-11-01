@@ -43,7 +43,11 @@ public class PacStudentController : MonoBehaviour
 
         if (!tweener.TweenExists(transform))
         {
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position+directions[lastInput], 0.2f);
+            if (animator.speed ==0 )
+            {
+                animator.speed = 1;
+            }
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
             if (hitColliders[0].gameObject.tag == "Walkable")
             {
                 currentInput = lastInput;
@@ -62,7 +66,15 @@ public class PacStudentController : MonoBehaviour
                     tweener.AddTween(transform, transform.position, endpos2, 0.5f);
                     animator.SetInteger("Direction", currentInput);
                 }
+                if (hitColliders2[0].gameObject.tag !="Walkable")
+                {
+                    animator.speed = 0;
+                }
             }
+        }
+        if (tweener.TweenExists(transform))
+        {
+
         }
 
        
