@@ -1451,6 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweener: {fileID: 764130642}
+  animator: {fileID: 764130637}
 --- !u!114 &764130642
 MonoBehaviour:
   m_ObjectHideFlags: 0
