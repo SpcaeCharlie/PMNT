@@ -1452,6 +1452,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweener: {fileID: 764130642}
   animator: {fileID: 764130637}
+  audio: {fileID: 764130640}
+  walk: {fileID: 8300000, guid: 078f3b7c52d3f3e4ab119b61e2f513c3, type: 3}
+  pelletwalk: {fileID: 8300000, guid: 65ac933531fd0384d883c673e413ffe8, type: 3}
+  death: {fileID: 0}
+  pellet: {fileID: 2702138750899985183, guid: a4c7e99d9a5f3704da35509bca922250, type: 3}
+  blank: {fileID: -6549960491094577852, guid: a4c7e99d9a5f3704da35509bca922250, type: 3}
+  powerpellet: {fileID: -6052723380629557440, guid: a4c7e99d9a5f3704da35509bca922250, type: 3}
 --- !u!114 &764130642
 MonoBehaviour:
   m_ObjectHideFlags: 0

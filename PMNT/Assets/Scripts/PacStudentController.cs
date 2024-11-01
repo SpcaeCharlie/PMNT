@@ -10,8 +10,14 @@ public class PacStudentController : MonoBehaviour
     public Tweener tweener;
     private int currentInput;
     private List<Vector3> directions = new List<Vector3>(); // Use List instead of array
-    public Animator animator; 
-
+    public Animator animator;
+    public AudioSource audio;
+    public AudioClip walk;
+    public AudioClip pelletwalk;
+    public AudioClip death;
+    public Sprite pellet;
+    public Sprite blank;
+    public Sprite powerpellet;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +60,18 @@ public class PacStudentController : MonoBehaviour
                 Vector3 endpos = new Vector3(hitColliders[0].gameObject.transform.position.x, hitColliders[0].gameObject.transform.position.y, -1f);
                 tweener.AddTween(transform, transform.position, endpos, 0.5f);
                 animator.SetInteger("Direction", lastInput);
+                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == blank )
+                {
+                    audio.clip = walk;
+                    Debug.Log("problem1");
+                    audio.Play();
+                }
+                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
+                {
+                    audio.clip = pelletwalk;
+                    audio.Play();
+                }
+                
             }
             if (hitColliders[0].gameObject.tag != "Walkable")
             {
@@ -65,10 +83,23 @@ public class PacStudentController : MonoBehaviour
 
                     tweener.AddTween(transform, transform.position, endpos2, 0.5f);
                     animator.SetInteger("Direction", currentInput);
+                    if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == blank)
+                    {
+                        audio.clip = walk;
+                        Debug.Log("problem2");
+                        audio.Play();
+                    }
+                    if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
+                    {
+                        audio.clip = pelletwalk;
+                        audio.Play();
+                    }
+                    
                 }
                 if (hitColliders2[0].gameObject.tag !="Walkable")
                 {
                     animator.speed = 0;
+                    audio.Stop();
                 }
             }
         }
