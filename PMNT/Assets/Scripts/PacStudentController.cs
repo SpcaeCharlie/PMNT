@@ -18,6 +18,9 @@ public class PacStudentController : MonoBehaviour
     public Sprite pellet;
     public Sprite blank;
     public Sprite powerpellet;
+
+    public ParticleSystem particle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,9 @@ public class PacStudentController : MonoBehaviour
                     audio.clip = pelletwalk;
                     audio.Play();
                 }
+                //particle.Play();
+                particle.Emit(20);
+
                 
             }
             if (hitColliders[0].gameObject.tag != "Walkable")
@@ -94,7 +100,8 @@ public class PacStudentController : MonoBehaviour
                         audio.clip = pelletwalk;
                         audio.Play();
                     }
-                    
+                    //particle.Play();
+                    particle.Emit(20);
                 }
                 if (hitColliders2[0].gameObject.tag !="Walkable")
                 {
