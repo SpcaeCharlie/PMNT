@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PacStudentController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PacStudentController : MonoBehaviour
     public Sprite pellet;
     public Sprite blank;
     public Sprite powerpellet;
+    public ParticleSystem collisionparticle;
 
    
 
@@ -56,9 +58,9 @@ public class PacStudentController : MonoBehaviour
 
         if (!tweener.TweenExists(transform))
         {
-            
-           
-        
+
+
+
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
             if (hitColliders[0].gameObject.tag == "Walkable")
             {
@@ -67,10 +69,10 @@ public class PacStudentController : MonoBehaviour
                 tweener.AddTween(transform, transform.position, endpos, 0.5f);
                 animator.SetInteger("Direction", lastInput);
                 animator.speed = 1;
-                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == blank )
+                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == blank)
                 {
                     audio.clip = walk;
-                    Debug.Log("problem1");
+
                     audio.loop = true;
                     audio.Play();
                     collisionchecker = 0;
@@ -87,7 +89,7 @@ public class PacStudentController : MonoBehaviour
                 //particle.Play();
                 particle.Emit(20);
 
-                
+
             }
             if (hitColliders[0].gameObject.tag != "Walkable")
             {
@@ -103,7 +105,7 @@ public class PacStudentController : MonoBehaviour
                     if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == blank)
                     {
                         audio.clip = walk;
-                       
+
                         audio.Play();
                         collisionchecker = 0;
                         Debug.Log("problem2");
@@ -118,25 +120,23 @@ public class PacStudentController : MonoBehaviour
                     //particle.Play();
                     particle.Emit(20);
                 }
-                if (hitColliders2[0].gameObject.tag !="Walkable" && collisionchecker ==0)
+                if (hitColliders2[0].gameObject.tag != "Walkable" && collisionchecker == 0)
                 {
                     animator.speed = 0;
                     audio.loop = false;
                     audio.clip = Collision;
                     audio.Play();
                     collisionchecker += 1;
-                if (hitColliders2[0].gameObject.tag !="Walkable")
-                {
-                    animator.speed = 0;
-                    audio.Stop();
+                    Transform pos = hitColliders2[0].gameObject.transform;
+                    collisionparticle.transform.position = new Vector3(pos.position.x - 0.3f, pos.position.y, -1);
+                    collisionparticle.Emit(20);
                 }
             }
-        }
-        if (tweener.TweenExists(transform))
-        {
+            if (tweener.TweenExists(transform))
+            {
+
+            }
 
         }
-
-       
     }
 }
