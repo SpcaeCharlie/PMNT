@@ -17,6 +17,8 @@ public class PacStudentController : MonoBehaviour
     private int collisionchecker = 0;
     public Animator animator;
     public AudioSource audio;
+    public AudioSource mainAudio;
+    public AudioClip scared;
     public AudioClip walk;
     public AudioClip pelletwalk;
     public AudioClip death;
@@ -69,6 +71,14 @@ public class PacStudentController : MonoBehaviour
                     playerscore += 10;
                     currentpos = null;
                 }
+                else if (currentpos.tag == "powerpellet")
+                {
+                    StartCoroutine(scaredstate());
+                    //mainAudio.clip = normalstate;
+                    currentpos.GetComponent<Animator>().enabled = false;
+                    currentpos.GetComponent<SpriteRenderer>().sprite = blank;
+                    currentpos = null;
+                }
             }
 
 
@@ -78,7 +88,7 @@ public class PacStudentController : MonoBehaviour
                 Debug.Log("list empty");
                 transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
             }
-            else if (hitColliders[0].gameObject.tag == "Walkable")
+            else if (hitColliders[0].gameObject.tag == "Walkable" || hitColliders[0].gameObject.tag == "powerpellet")
             {
                 currentInput = lastInput;
                 Vector3 endpos = new Vector3(hitColliders[0].gameObject.transform.position.x, hitColliders[0].gameObject.transform.position.y, -1f);
@@ -94,7 +104,7 @@ public class PacStudentController : MonoBehaviour
                     collisionchecker = 0;
                     audio.Play();
                 }
-                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
+                if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders[0].gameObject.tag == "powerpellet")
                 {
                     audio.clip = pelletwalk;
                     audio.loop = true;
@@ -111,7 +121,7 @@ public class PacStudentController : MonoBehaviour
             else if (hitColliders[0].gameObject.tag != "Walkable")
             {
                 Collider2D[] hitColliders2 = Physics2D.OverlapCircleAll(transform.position + directions[currentInput], 0.2f);
-                if (hitColliders2[0].gameObject.tag == "Walkable")
+                if (hitColliders2[0].gameObject.tag == "Walkable" || hitColliders2[0].gameObject.tag == "powerpellet") 
                 {
                     collisionchecker = 0;
 
@@ -128,7 +138,7 @@ public class PacStudentController : MonoBehaviour
                         Debug.Log("problem2");
                         audio.Play();
                     }
-                    if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
+                    if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders2[0].gameObject.tag == "powerpellet")
                     {
                         audio.clip = pelletwalk;
                         audio.Play();
@@ -158,4 +168,44 @@ public class PacStudentController : MonoBehaviour
 
         }
     }
+
+    public Animator Clyde;
+    public Animator Inky;
+    public Animator Pinky;
+    public Animator Blinky;
+    public TextMeshProUGUI timer;
+    public AudioClip normalstate;
+    private float countdown = 10f;
+
+    private IEnumerator scaredstate()
+    {
+        Debug.Log("activated");
+        mainAudio.clip = scared;
+        mainAudio.Play();
+        Clyde.SetInteger("Direction", 5);
+        Inky.SetInteger("Direction", 5);
+        Pinky.SetInteger("Direction", 5);
+        Blinky.SetInteger("Direction", 5);
+        while (countdown >=0 )
+        {
+            timer.text = countdown.ToString("F0");
+            yield return new WaitForSeconds(1f);
+            countdown--;
+            if (countdown == 3)
+            {
+                Clyde.SetInteger("Direction", 10);
+               Inky.SetInteger("Direction", 10);
+                Pinky.SetInteger("Direction", 10);
+                Blinky.SetInteger("Direction", 10);
+            }
+        }
+        Clyde.SetInteger("Direction", 1);
+        Inky.SetInteger("Direction", 1);
+        Pinky.SetInteger("Direction", 1);
+        Blinky.SetInteger("Direction", 1);
+        countdown = 10f;
+        mainAudio.clip = normalstate;
+        mainAudio.Play();
+    }
+
 }

@@ -1276,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 764130635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.84, y: 0.06, z: -1}
+  m_LocalPosition: {x: -6.25, y: 6.75, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1471,6 +1471,8 @@ MonoBehaviour:
   tweener: {fileID: 764130642}
   animator: {fileID: 764130637}
   audio: {fileID: 764130640}
+  mainAudio: {fileID: 215041066}
+  scared: {fileID: 8300000, guid: 6487b44bbbb213c45b6807b93f80efa2, type: 3}
   walk: {fileID: 8300000, guid: 078f3b7c52d3f3e4ab119b61e2f513c3, type: 3}
   pelletwalk: {fileID: 8300000, guid: 65ac933531fd0384d883c673e413ffe8, type: 3}
   death: {fileID: 0}
@@ -1481,6 +1483,12 @@ MonoBehaviour:
   collisionparticle: {fileID: 1296220949}
   particle: {fileID: 778892140}
   score: {fileID: 1266553548}
+  Clyde: {fileID: 1827084309}
+  Inky: {fileID: 432772050}
+  Pinky: {fileID: 1405974534}
+  Blinky: {fileID: 152885572}
+  timer: {fileID: 961051190}
+  normalstate: {fileID: 8300000, guid: 58b4dae49461a2e4c82faf20aedfd8a6, type: 3}
 --- !u!114 &764130642
 MonoBehaviour:
   m_ObjectHideFlags: 0

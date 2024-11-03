@@ -225,6 +225,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                    Animator animator = temp.AddComponent<Animator>();
                     animator.runtimeAnimatorController = pelletanim;
+                    temp.tag = "powerpellet";
                 }
                 if (tilenum == 7 || tilenum == 1 || tilenum == 2 || tilenum == 3 || tilenum == 4)
                 {

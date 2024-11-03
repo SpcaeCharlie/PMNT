@@ -69,7 +69,7 @@ private void cherryplacer()
             {
                 for (int i = 0; i < hitColliders.Length; i++)
                 {
-                    Debug.Log(hitColliders[i].gameObject.tag);
+                   // Debug.Log(hitColliders[i].gameObject.tag);
                     if (hitColliders[i].gameObject.tag == "test")
                     {
                         Debug.Log("hit");
