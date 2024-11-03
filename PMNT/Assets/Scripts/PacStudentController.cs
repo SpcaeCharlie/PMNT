@@ -58,6 +58,7 @@ public class PacStudentController : MonoBehaviour
         {
             
            
+        
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
             if (hitColliders[0].gameObject.tag == "Walkable")
             {
@@ -73,6 +74,7 @@ public class PacStudentController : MonoBehaviour
                     audio.loop = true;
                     audio.Play();
                     collisionchecker = 0;
+                    audio.Play();
                 }
                 if (hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
                 {
@@ -80,6 +82,7 @@ public class PacStudentController : MonoBehaviour
                     audio.loop = true;
                     audio.Play();
                     collisionchecker = 0;
+                    audio.Play();
                 }
                 //particle.Play();
                 particle.Emit(20);
@@ -92,6 +95,7 @@ public class PacStudentController : MonoBehaviour
                 if (hitColliders2[0].gameObject.tag == "Walkable")
                 {
                     collisionchecker = 0;
+
                     Vector3 endpos2 = new Vector3(hitColliders2[0].gameObject.transform.position.x, hitColliders2[0].gameObject.transform.position.y, -1f);
 
                     tweener.AddTween(transform, transform.position, endpos2, 0.5f);
@@ -102,6 +106,8 @@ public class PacStudentController : MonoBehaviour
                        
                         audio.Play();
                         collisionchecker = 0;
+                        Debug.Log("problem2");
+                        audio.Play();
                     }
                     if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == powerpellet)
                     {
@@ -119,6 +125,10 @@ public class PacStudentController : MonoBehaviour
                     audio.clip = Collision;
                     audio.Play();
                     collisionchecker += 1;
+                if (hitColliders2[0].gameObject.tag !="Walkable")
+                {
+                    animator.speed = 0;
+                    audio.Stop();
                 }
             }
         }
