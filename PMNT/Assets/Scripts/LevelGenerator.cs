@@ -96,7 +96,7 @@ public class LevelGenerator : MonoBehaviour
                     {
                         
                         if (north && !south && !east && !west) {
-                            Debug.Log("north");
+                            
                             if (j == 0)
                             {
                                 west = true;
@@ -109,7 +109,7 @@ public class LevelGenerator : MonoBehaviour
 
                         if (south && !north && !east && !west)
                         {
-                            Debug.Log("south");
+                            
                             if (j == 0)
                             {
                                 west = true;
