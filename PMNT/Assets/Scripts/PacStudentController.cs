@@ -85,7 +85,7 @@ public class PacStudentController : MonoBehaviour
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
             if (hitColliders.Length <=0)
             {
-                Debug.Log("list empty");
+                
                 transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
             }
             else if (hitColliders[0].gameObject.tag == "Walkable" || hitColliders[0].gameObject.tag == "powerpellet")
@@ -135,7 +135,7 @@ public class PacStudentController : MonoBehaviour
 
                         audio.Play();
                         collisionchecker = 0;
-                        Debug.Log("problem2");
+                       
                         audio.Play();
                     }
                     if (hitColliders2[0].gameObject.GetComponent<SpriteRenderer>().sprite == pellet || hitColliders2[0].gameObject.tag == "powerpellet")
@@ -179,7 +179,7 @@ public class PacStudentController : MonoBehaviour
 
     private IEnumerator scaredstate()
     {
-        Debug.Log("activated");
+        
         mainAudio.clip = scared;
         mainAudio.Play();
         Clyde.SetInteger("Direction", 5);

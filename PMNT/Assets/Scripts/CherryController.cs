@@ -43,7 +43,7 @@ private void cherryplacer()
         templist.Add(temp);
         float ypos = Random.Range(1f, -1f);
         int xpos = Random.Range(0, 2);
-        Debug.Log(xpos);
+        
         if (xpos ==0 )
         {
             Vector3 leftScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
