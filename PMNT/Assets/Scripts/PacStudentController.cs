@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class PacStudentController : MonoBehaviour
 {
-
+    private int playerscore=0;
+    private GameObject currentpos;
     private int lastInput;
     public Tweener tweener;
     private int currentInput;
@@ -22,10 +25,9 @@ public class PacStudentController : MonoBehaviour
     public Sprite blank;
     public Sprite powerpellet;
     public ParticleSystem collisionparticle;
-
-   
-
     public ParticleSystem particle;
+
+    public TextMeshProUGUI score;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class PacStudentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        score.text = playerscore.ToString();
         if (Input.GetKeyDown(KeyCode.W))
         {
             lastInput = 0;
@@ -58,7 +61,15 @@ public class PacStudentController : MonoBehaviour
 
         if (!tweener.TweenExists(transform))
         {
-
+            if (currentpos != null)
+            {
+                if (currentpos.GetComponent<SpriteRenderer>().sprite == pellet)
+                {
+                    currentpos.GetComponent<SpriteRenderer>().sprite = blank;
+                    playerscore += 10;
+                    currentpos = null;
+                }
+            }
 
 
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
@@ -90,6 +101,7 @@ public class PacStudentController : MonoBehaviour
                     audio.Play();
                     collisionchecker = 0;
                     audio.Play();
+                    currentpos = hitColliders[0].gameObject;
                 }
                 //particle.Play();
                 particle.Emit(20);
@@ -121,6 +133,7 @@ public class PacStudentController : MonoBehaviour
                         audio.clip = pelletwalk;
                         audio.Play();
                         collisionchecker = 0;
+                        currentpos = hitColliders2[0].gameObject;
                     }
                     //particle.Play();
                     particle.Emit(20);
