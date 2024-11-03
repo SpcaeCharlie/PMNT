@@ -62,7 +62,12 @@ public class PacStudentController : MonoBehaviour
 
 
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position + directions[lastInput], 0.2f);
-            if (hitColliders[0].gameObject.tag == "Walkable")
+            if (hitColliders.Length <=0)
+            {
+                Debug.Log("list empty");
+                transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+            }
+            else if (hitColliders[0].gameObject.tag == "Walkable")
             {
                 currentInput = lastInput;
                 Vector3 endpos = new Vector3(hitColliders[0].gameObject.transform.position.x, hitColliders[0].gameObject.transform.position.y, -1f);
@@ -91,7 +96,7 @@ public class PacStudentController : MonoBehaviour
 
 
             }
-            if (hitColliders[0].gameObject.tag != "Walkable")
+            else if (hitColliders[0].gameObject.tag != "Walkable")
             {
                 Collider2D[] hitColliders2 = Physics2D.OverlapCircleAll(transform.position + directions[currentInput], 0.2f);
                 if (hitColliders2[0].gameObject.tag == "Walkable")
@@ -136,6 +141,7 @@ public class PacStudentController : MonoBehaviour
             {
 
             }
+            
 
         }
     }
